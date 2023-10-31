@@ -1,14 +1,14 @@
 print('hello, world2!')
-#first_name = 'Jonasz'
-#last_name = 'Olkowski'
-#full_name = first_name + " " + last_name
-#print('Hello ' + first_name)
-#print(type(first_name))
-#print('hello ' + full_name)
-#age = 23
-#age = age + 1
-#print(age)
-#print(type(age))
+first_name = 'Jonasz'
+last_name = 'Olkowski'
+full_name = first_name + " " + last_name
+print('Hello ' + first_name)
+print(type(first_name))
+print('hello ' + full_name)
+age = 23
+age = age + 1
+print(age)
+print(type(age))
 #print('Your age is: ' + (str(age)))
 #height = 176.6
 #print('Your height is ' + (str(height)) + 'cm')
