@@ -67,9 +67,40 @@ print(type(age))
 #print('Your age is: ' +str(age))
 #print('You are ' + str(height) +"cm tall")
 
-import math 
-pi = 3.14
-print(round(pi))
-print(math.ceil(pi))
+#import math 
+#pi = 3.14
+#x = 1
+#y = 2 
+#z = 3
+#print(round(pi)) #zaokrąglenia 
+#print(math.ceil(pi)) #zaokrąglenie w górę do całych
+#print(math.floor(pi)) #zaokrąglenie w dół do całych
+#print(abs(pi)) #absolutna wartość czyli odległość od zera
+#print(pow(pi,2)) #power do potęgi
+#print(math.sqrt(pi)) #squareroot pierwiastek drugiego stopnia
+#print(max(x, y, z)) #znajdź największą wartość ze zbioru
+#print(min(x, y, z)) #znajdź najmniejszą wartość ze zbioru
+
+name = 'Jonasz Olkowski'
+
+first_name = name[0:6] #pierwszy indeks jest włącznie a drugi bez ostatniej
+first_name_2 = name[:6] #brak indeksu oznacza indeks 0 na początku
+last_name = name[7:15] #tak jak wyżej
+last_name_2 = name[7:] #oznacza że do końca
+print(first_name)
+print(first_name_2)
+print(last_name)
+print(last_name_2)
+funky_name = name[0::2] # start/stop/step można też zapisać [::2]
+print(funky_name)
+reversed_name = name[::-1] #-1 powoduje ze liczy od końca zamiast od początku
+print(reversed_name)
+
+website = "htpp://google.com"
+slice = slice(7,-4)#slice w przeciwienstwie do indeksow dzielą , zamiat :
+#dodatkowo wartości od konca liczy sie od 1 zamiast zera i uzywa znaku minus
+print(website[slice])
+website_2 = "http://wikipedia.com"
+print(website_2[slice])
 
 
