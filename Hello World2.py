@@ -106,7 +106,7 @@ print(reversed_name)
 
 website = "htpp://google.com"
 slice = slice(7,-4)#slice w przeciwienstwie do indeksow dzielą ',' zamiat ':'
-dodatkowo wartości od konca liczy sie od 1 zamiast zera i uzywa znaku minus
+#dodatkowo wartości od konca liczy sie od 1 zamiast zera i uzywa znaku minus
 print(website[slice])
 website_2 = "http://wikipedia.com"
 print(website_2[slice])"""
