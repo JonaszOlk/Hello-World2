@@ -254,5 +254,34 @@ print(food) #print wszystkie listy
 print(food[0][0]) #print [która lista][który index z tej listy]"""
 
 #tuples
+"""#zbiór uporządkowana i niezmienna uzywana do grupowania danych, są jak listy tylko brak zmian i są uporządkowane
 
+student = ("Jonasz",23,"male")
+print(student.count("Jonasz")) #count how many times data apears in tuple
+print(student.index("male")) #count in which place data is putted
 
+for x in student: #print all datas in tuple
+    print(x)
+
+if "Jonasz" in student: #check if X apears in datas inside tuple
+    print("Jonasz is here")"""
+
+#sets
+#sets -> collection that's unordered and unindexed, no duplicate values
+"""utensils = {"fork", "spoon", "knife"}
+dishes = {"bowl","plate","cup","knife"}
+
+utensils.add("napkin") #add to set
+utensils.remove("fork") #remove from set
+utensils.clear() #clear the set
+#utensils.update(dishes) #update utensils o dishes
+dinner_table = utensils.union(dishes)
+
+for x in utensils: #output zawartości zbioru w randomowej kolejności
+    print(x)
+
+for x in dinner_table:
+    print(x)
+
+print(dishes.difference(utensils)) #pokaz roznice miedzy setami
+print(dishes.intersection(utensils)) #pokaz co sety mają ze sobą wspólnego"""
