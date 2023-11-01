@@ -256,4 +256,3 @@ print(food[0][0]) #print [która lista][który index z tej listy]"""
 #tuples
 
 
-
