@@ -269,7 +269,7 @@ XD37 = 456
 print(isinstance(XD37, int))#sprawda czy wartosc jest zapisana jako integer
 #Python Operators
 #arythmetics
-#składa się na to +, -, *, /, **(potęgi), %(reszta z dzielenia), //(zaokrągla do najbliższej liczby całkowitej)
+#składa się na to +, -, *, /, **(potęgi), %(reszta z dzielenia), //(zaokrągla do najbliższej liczby całkowitej w dół)
 print(1 + 2)#addition
 print(5 - 2)#substraction
 print(3 * 5)#multiplication
