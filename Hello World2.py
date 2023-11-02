@@ -284,4 +284,114 @@ for x in dinner_table:
     print(x)
 
 print(dishes.difference(utensils)) #pokaz roznice miedzy setami
-print(dishes.intersection(utensils)) #pokaz co sety mają ze sobą wspólnego"""
+print(dishes.intersection(utensils)) #pokaz co sety mają ze sobą wspólnego""" 
+
+#dictionary 
+# a changeable, unordered collection of unique key:values paires
+#fast because they use hashing, allow us to access a value quickly
+
+"""capitals = {'USA': 'Washington DC',   #dicitionary konstrukcja zmienna = {Key: value,}
+            'India':'New Dheli',
+            'China':'Beijing',
+            'Russia':'Moscow',
+            'Poland':'Warsaw'}
+
+print(capitals['Russia']) #prints value of the key but gives us error when there is no key in dict
+print(capitals.get('Russia')) #safer cuz prints none if there is no key in dict
+print(capitals.keys()) #prints only keys from dictionary
+print(capitals.values()) #prints only values from dictionary
+print(capitals.items()) #prints both keys and values from dictionary
+
+for key,value in capitals.items(): #prints every key and value asigned to one 
+    print(key,value)
+
+capitals.update({"Germany":"Barlin"}) #update dictionary with this key and value ({"x":"y"})
+print(capitals.items())
+
+capitals.update({"USA":"NY"}) #update value of the key
+print(capitals.items())
+
+capitals.update({"Unia":"Warsaw"}) #update key conected to the value
+print(capitals.items())
+
+capitals.pop("China") #delete Key and value asigned to it, there is no {}
+print(capitals.items())
+
+capitals.clear() #clear dict completly
+print(capitals.items())"""
+
+#indexing
+#index operator -> [] = gives access to a sequence's element (str,list,tuples)
+
+"""name = "Jonasz Olkowski"
+if(name[0].isupper()): #isupper or is lower sprawdz czy pierwsza litera jest duża/mała if true
+    name = name.lower()                                                           #zamień na małą
+
+print(name)                                                                       #print everything in lowercase
+
+first_name = name[0:3].upper() #nowa zmienna powstaje z częscie wyznaczonej przez indexy, wszystko zostaje capslock
+print(first_name)
+
+last_name = name[7:].lower() #nowa zmienna powstaje z wyznaczonego indexem, wszystko z małej
+print(last_name)
+
+name_2 = "Jonasz Olkowski!" #nowa zmienna
+last_character = name_2[-1] #tworzy z ostatniego znaku bo -1
+print(last_character)"""
+
+# functions 
+# a block of code which is executed only when it is called
+
+"""def hello(): #start with def of function and naming to call it use its name and "()"
+    print("hello!")
+    print("Have a nice day!")
+
+hello()
+hello()
+hello()
+
+def hello_2(name): #name a argument in function name so later u can use it to fill the argument
+    print("hello " + name)
+    print("Have a nice day!")
+
+hello_2("Bro") #name in function is changed with "Bro"
+hello_2("Jonasz") #name in function is changed with "Jonasz"
+
+my_name = "bro" #diffrent option insted of giving info to the brackets in called function we can give
+                #value to the argument and then give this argument to called function
+
+hello_2(my_name)
+
+# hello_2("Bro","Code") wouldn't work cuz there is only one argument function not two
+
+def hello_3(first_name, last_name): #two parameters and updated places for them in function
+    print("hello " + first_name + last_name)
+    print("Have a nice day!")
+
+hello_3("Bro ", "Code") #filling for two parameters in function
+
+def hello_4(first_name, last_name, age): #function with 3 parameters
+    print("Hello " + first_name + last_name)
+    print("You are", age ,"years old") #can't use + cuz str and int
+
+hello_4("Jonasz", "Olkowski", 23) #filling of 3 parameters"""
+
+#return statement
+#functions send Python values/objects bacl to the caller
+#These values/objects are known as function's return data
+
+def multiply(number1, number2): #option 1 where result is returned to the caller
+    result = number1 * number2
+    return result
+
+x = multiply(11,22) #n1 and n2 is 11 and 22 and is stored as x
+print(multiply(6,8)) #is alredy printing a result od function for 6 * 8
+print(x) # is printing a value stored for x
+
+def multiply_2(number_3,number_4):
+    return number_3 * number_4
+
+y = multiply_2(70,72)
+print(y)
+
+
