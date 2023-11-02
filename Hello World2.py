@@ -380,7 +380,7 @@ hello_4("Jonasz", "Olkowski", 23) #filling of 3 parameters"""
 #functions send Python values/objects bacl to the caller
 #These values/objects are known as function's return data
 
-def multiply(number1, number2): #option 1 where result is returned to the caller
+"""def multiply(number1, number2): #option 1 where result is returned to the caller
     result = number1 * number2
     return result
 
@@ -388,10 +388,90 @@ x = multiply(11,22) #n1 and n2 is 11 and 22 and is stored as x
 print(multiply(6,8)) #is alredy printing a result od function for 6 * 8
 print(x) # is printing a value stored for x
 
-def multiply_2(number_3,number_4):
+def multiply_2(number_3,number_4): #2nd option of function with return in less lines
     return number_3 * number_4
 
-y = multiply_2(70,72)
-print(y)
+y = multiply_2(70,72) #same like x
+print(y)"""
 
+#keyword arguments
+# these are arguments that are proceed by identifier, when we pass them to a function
+# order doesn't matter, unlike positional arguments
+# Python knows the name of the arguments that are recevied by function
+# example of positional arguments are in functions, every position is important for correct output of the function
+#in case of keywords argument positioning won't matter
+
+"""def hello(first,middle,last):
+    print("Hello "+ first + " " +middle+ " " + last)
+
+hello(first="Jonasz",middle="Nikodem",last="Olkowski") #when arguments are preceded with identifier 
+#                                                       they order doesn't matter"""
+
+#nested function calls
+#function calls inside other function calls 
+#innermost function calls are resolved first; work in -> out
+#returned value is used as argument for the next outter function
+
+"""num = input("entera whole positive number") #mozemy uprosicic te działania za pomocą nested function 
+num = float(num)
+num = abs(num)
+num = round(num)
+print(num)
+
+print(round(abs(float(input("Enter a whloe positive number"))))) #nested function"""
+
+#variable scope
+# The region that a variable is recognized
+# A variable is only avaible from inside the region it is created
+# A global and locally scoped version of a variable can be created
+
+"""def display_name():
+    name = "Code" #Here is a variable that is inside function thats local scope variable(only inside avaible)
+    print(name)
+
+#print(name) #name isn't defined cuz name before was created inside function and it is local scope, but we can
+# can create global variable by putting it outsied function "name = BRO" amd it is global scope
+#                                                             avaible inside and outsie function
+#it is possible to have global and local variable of the same name but then print function with inside version
+# is going to be first and then print global variable
+#for ex.
+number = 9
+
+def display_number():
+    number = 7
+    print(number)
+
+display_number() #output 7 9 if we are going to delete local scoop in function output is gonna be 9 9
+print(number)    #Python is following the rule named LEGB (L)ocal (E)nclosing (G)lobal (B)uilt-in 
+                                                            #in a way of using ordered variables"""
+
+#*args
+#parameter that will pack all arguments into a tuple
+#useful so that a function can accept a varying amount of arguments
+
+"""def add(num1, num2): #it works only when we want to add two parameters
+    sum = num1 + num2
+    return sum
+
+print(add(1,2))
+
+#to resolve the issue we can use *args
+
+def add_2(*args): #you can name args however you want but you have to remember about asterik "*"(but it is often called args)
+    sum2 = 0      #thanks to that we are packing all arguments into a tuple(ordered and unchangeable) 
+    for i in args:#then thanks to that we are not limited aslike in example above
+        sum2 += i #so we can sum more of the arguments
+    return sum2
+
+#to change arguments in tuples we have to transform them into list for ex
+def add_3(*pack): #create tuple with *x
+    sum3 = 0      #sum for beggining
+    pack = list(pack) #transform tuple into list
+    pack[0] = 0       #now we can change values inside list by indexing
+    for i in pack:    #works like in ex above but now we can transform them
+        sum3 += i
+    return sum3
+
+print(add_2(1,2,3,4,5,6,7))
+print(add_3(1,2,3,4,5,6,7))"""
 
