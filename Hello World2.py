@@ -475,3 +475,89 @@ def add_3(*pack): #create tuple with *x
 print(add_2(1,2,3,4,5,6,7))
 print(add_3(1,2,3,4,5,6,7))"""
 
+#**kwargs = *args packed everything int tuple, but **kwargs will pack everything into dictionary
+#useful so that a function can acccept a varying amount of keywords arguments
+
+"""def hello(first,last): #here is a function that will work for two arguments only
+    print("hello " + first + " " + last ) #this function will print hello f l
+
+hello(first="Bro",last="Code") #we gave values to arguments for function two work with
+#in case someone has a middle name we would like to use hello(first="x",middle="dude",last="code") but it won't work
+
+def hello2(**kwargs):#kwarg = keywords arguments but you can name them however but remember about "**" it is the name 
+#of dictionary
+    print("Hello " + kwargs['first_2'] + " " + kwargs["last_2"]) #This will work as above byt wont show error for 
+#more arguments like function above
+hello2(first_2="bro",middle="dude",last_2="bro")
+#now to display full name usin kwargs
+def hello3(**kwargs2): #now for unlimited amount of key arguments
+    print("Hello",end=" ") #we use "end=' ' " to display it on the same lane as print below
+    for key,value in kwargs2.items(): #for every key in kwargs2 print value for that keys
+        print(value,end=" ")
+
+hello3(title="mister",name3="Jonasz",middle3="Nikodem",last="Olkowski")"""
+
+#strin.format() = str.format(), optional method that gives users more control when displaying output
+
+"""animal = "cow" #data stored in variables
+item = "moon"
+print("The "+animal+" jumped over the "+item) #connecting string as output
+#using format method
+print("The {} jumped over the {}".format("cow","moon"))#the brackets works as placeholders that are explained by 
+#format(value1,value2) We can replace values with variables
+print("The {} jumped over the {}".format(animal,item))#the first bracket/placeholder'll dispaly first thing in format
+#next option in positional arguments
+print("The {0} jumped over the {1}".format(animal,item)) # using index we can change order, we can reuse index
+#last way at given format field is keyword arguments
+print("The {animal} jumped over the {item}".format(animal="cow",item="moon"))#now we wouldn't need our variables at top,and
+#we are still able to use indexes to change order of format input, we can reuse variables
+
+#another way to write it
+text = "The {} jumped over the {}" #The format method
+print(text.format(animal,item))
+
+#adding padding
+name = "Bro"
+
+print("Hello, my name is {}".format(name)) #we can add some padding before or after our placeholder
+#padding example
+print("Hello, mu name is {:10} x".format(name))#we just added ten spaces here,it is 10 to the right 
+print("Hello, mu name is {:<10} x".format(name))#left align <,(no visable example, cuz it is by default)
+print("Hello, mu name is {:>10} x".format(name))#right align >, our name moved ten spaces to the right
+print("Hello, mu name is {:^10} x".format(name))#center align ^, both ways four spaces
+#what if we nned to add positional argument or keywords argument to our format field, but there is some txt?
+#add before a collin example {0:10} ->psotional, {name:10} -> keyword argument, and follow by whatever you want
+#now changing format of number variable
+number=3.14159
+print("The number pi is {}".format(number))#it will display full floatin number
+print("The number pi is {:.2f}".format(number)) #f is for floating points numbers, .2 -> is for two numbers after dot
+print("The number pi is {:.3f}".format(number)) #It will display 3 digits after dot and it will round the number for us
+
+number_2=1000
+print("The number is {}".format(number_2)) #it will display number
+print("The number is {:,}".format(number_2))#it will display number with the come before 3 zeros to make it easy 
+print("The number is {:b}".format(number_2))#it will display a binary number as 0=0 1=01 2=10 3=11, 4=100
+print("The number is {:o}".format(number_2))#it will display octal number
+print("The number is {:x}".format(number_2))#hexadecimal number, lower for lowercase,upper fo uppercase 
+print("The number is {:X}".format(number_2))
+print("The number is {:e}".format(number_2))#scientific notation with lower upper
+print("The number is {:E}".format(number_2))"""
+
+#random numbers =random module which is pseudo 
+"""import random #now we have access to every option of random module 
+
+x = random.randint(1,6) #with described limits it will generate random number between 1 to 6 in int,
+#without it is jus any random
+print(x)
+y = random.random() #generate random floating number, it takes no arguments
+print(y)
+my_list = ["rock","paper","scissors"]
+z = random.choice(my_list)#now it gives us an option to randomly choice something from the list
+print(z)
+#shuffle to randomly shuffle list or other collection
+cards = [1,2,3,4,5,6,7,8,9,"J","Q","K","A"] #deck of cards
+random.shuffle(cards) #randomly shuffle list
+print(cards[0]) #print first value of shuffled list
+print(cards) #print all values of shuffled list"""
+
+#exception handling
