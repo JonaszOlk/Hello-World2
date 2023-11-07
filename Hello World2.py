@@ -560,4 +560,82 @@ random.shuffle(cards) #randomly shuffle list
 print(cards[0]) #print first value of shuffled list
 print(cards) #print all values of shuffled list"""
 
-#exception handling
+#exception handling = event detected during execution that interrupt the flow of it
+
+# numerator = int(input("Enter a number to divide: ")) #it will work as long as we work inside mathematicly correct 
+# denominator = int(input("Enter a number to divide by: ")) #statements, we will interrupt flow of program with divide
+# result = numerator / denominator #by 0 for example 
+# print(result)
+
+#for any code that is risky with exceptions we can put it inside "try:"
+
+"""try: #It will try to run a program but instead of the error msg and interruption of the flow 
+    numerator_2 = int(input("Number to divide: ")) #It will show us a given by us output
+    denominator_2= int(input("Number to divide by: ")) #We have to end a try: block with except
+    result_2 = numerator_2 / denominator_2
+    print(result_2)
+except ZeroDivisionError: #here is precise error as exception when someone is trying to divide by 0
+    print("You can't divide by 0!")
+except ValueError: #here is another problem where someone tried to use letters instead of numbers
+    print("Enter only numbers")
+except Exception: #It will work on all exceptions but it is better to be precise like above
+    print("something went wrong") #of course you can use at the end if someone would do something you didn't anticipate
+
+#Another way of showing someone what they did wrong is using except xxx as e:
+#It will print what exceptions someone did insted of only a msg from us
+#at the end we can py else: print(result) so it will work only if there is no exceptions we named
+try:
+    numerator_3 = int(input("Number to divide: ")) 
+    denominator_3= int(input("Number to divide by: ")) 
+    result_3 = numerator_3 / denominator_3
+except ZeroDivisionError as e:
+    print(e) 
+    print("You can't divide by 0!")
+except ValueError as e:
+    print(e) 
+    print("Enter only numbers")
+except Exception as e:
+    print(e) 
+    print("something went wrong")
+else:
+    print(result_3)
+#Here we can put our finally block that will always execute whatever error will be at the time
+finally:
+    print("It will always work!")#remember it when open and close file in future"""
+
+#file detection
+#we will be looking for files 
+
+"""import os
+#we will be checking if file exists somewhere on computer
+
+path = "C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\League of Legends.lnk" #that's a path value
+
+if os.path.exists(path): #if path exists print msg and if path is to the file print msg
+    print("that location exist")
+    if os.path.isfile(path):
+        print('That location is a file')
+    elif os.path.isdir(path): #if path isn't to a file but to dir print msg
+        print("That is a directory")
+else: #if path doesn't exist print msg
+    print("That location doesn't exist")"""
+
+#reading files
+#how to read a context of a file reading python
+
+"""with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt") as file: #now if this file would be inside
+# directory with this python code(visable on left) i would be able to just give a name of file
+    print(file.read())#this will close files automaticly after using them so it is convinient
+
+print(file.closed)#It will tell us if the file is closed but using with open("dir") it always close the file """
+
+#The code above with close files after using them automaticly but usually you have to close files by hand after
+#using them, as well it won't work when exceptions occur
+
+try:
+    with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt") as file: #if we misspelled the name or path
+#it won't work for us that's why we will use try: block from above
+        print(file.read())
+except FileNotFoundError as e:
+    print(e)
+    print("The file was not found :<")
