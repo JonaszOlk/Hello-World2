@@ -632,10 +632,12 @@ print(file.closed)#It will tell us if the file is closed but using with open("di
 #The code above with close files after using them automaticly but usually you have to close files by hand after
 #using them, as well it won't work when exceptions occur
 
-try:
+"""try:
     with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt") as file: #if we misspelled the name or path
 #it won't work for us that's why we will use try: block from above
         print(file.read())
 except FileNotFoundError as e:
     print(e)
-    print("The file was not found :<")
+    print("The file was not found :<")"""
+
+
