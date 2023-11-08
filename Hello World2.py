@@ -683,6 +683,6 @@ except FileNotFoundError: #exception is file not found error
 
 #delate a file in python
 
-
+x = 100
 
 
