@@ -624,8 +624,8 @@ else: #if path doesn't exist print msg
 #how to read a context of a file reading python
 
 """with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt") as file: #now if this file would be inside
-# directory with this python code(visable on left) i would be able to just give a name of file
-    print(file.read())#this will close files automaticly after using them so it is convinient
+# project folder with this python code(visable on left) i would be able to just give a name of file
+    print(file.read())#this will close files automaticly after using them so it is convenient
 
 print(file.closed)#It will tell us if the file is closed but using with open("dir") it always close the file """
 
@@ -639,5 +639,50 @@ print(file.closed)#It will tell us if the file is closed but using with open("di
 except FileNotFoundError as e:
     print(e)
     print("The file was not found :<")"""
+
+#write file we will be writing files in python and append
+"""text = "This is some text\nHave a good one\n" #this is a text that we will have in a file
+with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt" , 'w') as file: #wit open(path, 'w') to edit
+    file.write(text) #edited text from previous version to new with text value from above
+with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt") as file: #path to open file
+    print(file.read()) #read and close a file
+
+#append file
+text_2 = "This is text added insted of replacing old one\ngood job!" #new text to add
+with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt" , 'a') as file: #when we use 'a' insted of 'w' we
+    file.write(text_2) #can add text to the end of file insted of changing it
+with open("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt") as file: #path to open file
+    print(file.read()) #read new edited file"""
+
+#copy a file
+"""#shutil import gives us 3 options
+# copyfile() = copies contents of a file, it works inside a project cuz you don't need permision
+# copy() = copyfile() + permisson mode + destination can be a directory
+# copy2() = copy() + copies metadata(file's creation and modifications times)
+import shutil
+
+shutil.copy("C:\\Users\\jonas\\OneDrive\\Pulpit\\Gry\\test.txt.txt" , "C:\\Users\\jonas\\OneDrive\\Pulpit\\copy.txt")
+#here are two arguments source and destination with ',' between them"""
+
+#moving a file
+"""import os #we have to import os from library
+
+source = "C:\\Users\\jonas\\OneDrive\\Pulpit\\copy.txt" #path for source
+destination = "C:\\Users\\jonas\\OneDrive\\Pulpit\\naukakodowania\\copy.txt" #path for destination
+
+try: #using try: block with exception for errors
+    if os.path.exists(destination): #if path alredy exists inform me about it
+        print("There is alredy a file there")
+    else: #if path didn't exist
+        os.replace(source,destination) #change location from source to destination
+        print(source+" was moved") #inform me about it
+except FileNotFoundError: #exception is file not found error
+    print(source+ " was not found") #inform me about making an error in source path 
+#You can do the same with folders insted of naming file in source and on directory and this folder will be moved
+#to destination you have given and its name will change accordingly to the name you have given in dest"""
+
+#delate a file in python
+
+
 
 
