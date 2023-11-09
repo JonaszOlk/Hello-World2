@@ -731,3 +731,7 @@ msg.bye()
 
 help("modules") #will list all modules in terminal
 #u can find them in python official documentation online"""
+
+#game of rock,papper, scissors in python projects folder
+
+
