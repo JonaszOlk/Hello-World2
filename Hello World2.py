@@ -735,3 +735,43 @@ help("modules") #will list all modules in terminal
 #game of rock,papper, scissors in python projects folder
 #quiz game in python projects folder
 
+#object oriented programing(OOP)
+#is instance of the class, using programing we can create representations of real-life objects
+#we can create a class in main module or in file in the project to make it look cleaner using import
+#objects need 
+# attributes = is/has(name, age, height)
+#methods = actions(eat,sleep,record video)
+#class is like blueprints that sghow what attributes and methods our object will have
+#to impor class we have to write "from [file] import [name of the class]"
+
+class Car: #it's good practice to use capital letter for classes
+
+    def __init__(self,make,model,year,color):#we need 5 argumentts there cuz of self attached to the object
+        self.make = make #Attributes of caar
+        self.model = model 
+        self.year = year
+        self.color = color
+    def drive(self):#self refer to the object using method we need to pass self here in method
+        print("This "+self.model+" is driving")
+
+    def stop(self):
+        print("This "+self.model+" is stopped") #self is replaced with the name of the object
+
+car_1 = Car("Chevy","Corvette",2021,"blue") #when we are using class we only need 4 arguments cuz self
+# is passed automaticlly in python 
+
+print(car_1.make)
+print(car_1.model)
+print(car_1.year)
+print(car_1.color)
+car_1.drive() #self is passed automaticlly like in using class above
+car_1.stop() #self is replaced with name that is car_1.model insted of self.model
+
+car_2 = Car("Ford","Mustang",2022,"red")
+
+print(car_2.make)
+print(car_2.model)
+print(car_2.year)
+print(car_2.color)
+car_2.drive()
+car_2.stop()
