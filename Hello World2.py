@@ -682,7 +682,52 @@ except FileNotFoundError: #exception is file not found error
 #to destination you have given and its name will change accordingly to the name you have given in dest"""
 
 #delate a file in python
+"""import os #import os from library
+path = 'test.txt' #path argument with value == name of file or path to the file if it isn't in our project
+try:
+    os.remove(path) #commend to remove path in that case test.txt
+except FileNotFoundError as e:
+    print(e)
+    print("that file was not found")
+#now if there is no file that we decided to remove it is a good idea to use try: block
+#next step is removing folders
+path_2 ="empty_folder"
+try:
+    os.rmdir(path_2) #instead of remove we use rmdir(ReMoveDIRectory) to delete an empty folder
+except FileNotFoundError:
+    print("that file was not found")
+except PermissionError:
+    print("You do not have permission to delete that")
+else:
+    print(path_2+"was deleted") #but this option won't delete a folder with files
 
-x = 100
+#to remove folder with files we'll use this one:
+path_3 = 'folderxd'
+import shutil
+try:
+    shutil.rmtree('folderxd') #ReMoveTREE is to delete a folder with files, it is dangerous 
+except FileNotFoundError:
+    print("that file was not found")
+except PermissionError:
+    print("You do not have permission to delete that")
+except OSError: #error if we used os.rmdir cuz there are files inside
+    print("You can't delete that cuz there are files inside")
+else:
+    print(path_3+"was deleted")"""
 
+#modules
+"""#a file containing python code. May contain functions, classes, etc.
+#used with modular programming, which is to separate a program into parts
+#we can import a file with python code to use functions from it for example
+import messages as msg #import [name of the file} as [nickname]. 
+#without the nickname we have to use full name to use functions and diffrent things
+#instead of importing everything from messages we can import targeted elements
+#from messages import hello,bye
+#instead of giving arguents we can use args* to get them all but it is not the best with bigger programs
+#cuz of naming conflict
 
+msg.hello() #impotred functions
+msg.bye()
+
+help("modules") #will list all modules in terminal
+#u can find them in python official documentation online"""
