@@ -736,7 +736,7 @@ help("modules") #will list all modules in terminal
 #quiz game in python projects folder
 
 #object oriented programing(OOP)
-#is instance of the class, using programing we can create representations of real-life objects
+"""#is instance of the class, using programing we can create representations of real-life objects
 #we can create a class in main module or in file in the project to make it look cleaner using import
 #objects need 
 # attributes = is/has(name, age, height)
@@ -747,7 +747,7 @@ help("modules") #will list all modules in terminal
 class Car: #it's good practice to use capital letter for classes
 
     def __init__(self,make,model,year,color):#we need 5 argumentts there cuz of self attached to the object
-        self.make = make #Attributes of caar
+        self.make = make #Attributes of car
         self.model = model 
         self.year = year
         self.color = color
@@ -774,4 +774,92 @@ print(car_2.model)
 print(car_2.year)
 print(car_2.color)
 car_2.drive()
-car_2.stop()
+car_2.stop()"""
+
+#class variables
+#class and instance variables dif
+"""class Car:
+    #class variable is declared inside class but outside constructor(in con are insta variables)
+    wheels = 4 #class variable it will be assigned to every object created by this class
+    def __init__(self,make,model,year,color): #constructor
+        self.make=make #instance variable
+        self.model=model #instance variable
+        self.year=year #instance variable
+        self.color=color #instance variable each object can have their own uniqe values assigned  to each variable
+
+car_1 = Car("Chevy","Corvette",2021,"blue") #there are their instance variables declared
+car_2 = Car("Ford","Mustang",2022,"red")
+car_1.wheels = 2 #U can change class variable outside a class
+print("---------------------------")
+print(car_1.wheels)#changed class variable above
+print("---------------------------")
+print(car_2.wheels)#constant class variable from class Car
+
+Car.wheels = 2 #in car_1.wheels we changed class variables for only car_1 object but now we changed class variables 
+#for everything
+print("---------------------------")
+print(Car.wheels)#print new class variable value
+print("---------------------------")
+print(car_1.wheels)#new value for class variable in object car_1
+print("---------------------------")
+print(car_2.wheels)#-||- in object car_2
+print(car_1.color)"""
+
+#inheritance
+"""#its kinda like parents and children parent class can give some of their variables to their children class
+class Animal: #parent class
+
+    alive = True #class variable
+
+    def eat(self): #function
+        print("This animal is eating")
+    
+    def sleep(self): #function #you can make change in parent classes and it will change in all child classes
+        print("This animal is sleeping")
+
+class Rabbit(Animal):#child class class NewClass(ParenClass): it will inheritance all of variables and functions
+    def run(self):
+        print("This rabbit is running")#their own atributes by def x(self)
+
+class Fish(Animal):
+    def swim(self):
+        print("This fish is swimming")
+
+class Hawk(Animal):
+    def fly(self):
+        print("This hawk is flying")
+
+rabbit = Rabbit() #1st object assigned to class Rabbit
+fish = Fish() #2nd object -||-
+hawk = Hawk() #3rd object -||-
+
+print(rabbit.alive) #even when class Rabbit to which rabbit isassigned is empty, it still have access to 
+#parent(Animal) functions like alive or eat() and sleep()
+fish.eat()
+hawk.sleep()
+rabbit.run()
+fish.swim()
+hawk.fly()"""
+
+#multilevel inheritance
+"""#when a derived child class inherits another derived child class
+
+class Organism: #paren class
+    alive = True
+
+class Animal(Organism):#child class
+    def eat(self):
+        print("This animal is eating")
+
+class Dog(Animal): #child's child class
+    def bark(self):
+        print("This dog is barking")
+
+dog = Dog() #dog is an object of Dog class
+
+print(dog.alive) #inheritance form parent class
+dog.eat() #inheritance from child class
+dog.bark() #from child's child class"""
+
+#multiple inheritance
+
